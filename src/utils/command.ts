@@ -105,7 +105,6 @@ export const getGitDiff = async(logger: Logger, context: Context): Promise<Array
     args: [
       `${getCompareRef(diffInfo.base)}${dot}${getCompareRef(diffInfo.head)}`,
       `--diff-filter=${filter}`,
-      '--name-only',
       ...(relative ? [
         `--relative=${relative}`,
       ] : []),
